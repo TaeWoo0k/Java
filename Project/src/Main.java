@@ -1,19 +1,29 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	int a,b,c,d;
-	int i,j;
-	Scanner scanner = new Scanner(System.in);
-	a=scanner.nextInt();
-	b=scanner.nextInt();
-	c=scanner.nextInt();
-	d=scanner.nextInt();
 	
-			System.out.println(a%2 +" "+b%2 +" "+c%2 +" "+d%2 +" ");
-			System.out.println(a%4 +" "+b%4 +" "+c%4 +" "+d%4 +" ");
+		Scanner scanner = new Scanner(System.in);
+		int num = scanner.nextInt();
+		int score=0,tmp=1;
+		String a ;
+		
+		for(int j=0; j<num;j++) {
+			score=0;
+			tmp=0;
+			a = scanner.next();
+			for(int i = 0; i<a.length();i++) {
+				if(a.charAt(i)=='X') {
+					tmp=0;
+					continue;
+				}
+			
+				tmp++;
+				score+=tmp;
+			}
+		System.out.println(score);
+		}
 		
 	}
 }
